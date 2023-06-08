@@ -1,0 +1,26 @@
+<h1 class="text-danger">
+    User Dashboard
+</h1>
+<button type="submit" (click) ="logout()" class="btn btn-primary" >Logout</button>
+{{date}}<br/>
+{{date| date }}<br/>
+{{date| date |uppercase }}<br/>
+{{date| date :'short'}}
+<div class="col-md-9" >
+    <table class="table" >
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let candidate of user">
+            <td>{{candidate.name}}</td>
+            <td>{{candidate.email}}</td>
+            <td>{{candidate.age | salaryconversion}}</td>
+        
+
+        </tr>
+    </tbody>
+    </table>
+</div>
+
